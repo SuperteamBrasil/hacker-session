@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@firethreexyz/firethree-protocol": "^0.18.9",
     "@magic-ext/oauth": "^15.6.0",
     "@magic-ext/solana": "^18.4.0",
+    "@solana/spl-token": "^0.4.1",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.34",
     "@solana/wallet-adapter-wallets": "^0.19.24",
     "@solana/web3.js": "^1.89.1",
+    "bs58": "^5.0.0",
     "clsx": "^2.1.0",
     "magic-sdk": "^21.5.0",
     "next": "14.1.3",

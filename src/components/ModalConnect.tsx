@@ -8,7 +8,7 @@ import { useSolana } from "../context/Solana";
 import Modal from "./Modal";
 
 const ModalConnect: React.FC = () => {
-  const { setOpenConnect, openConnect } = useSolana();
+  const { setOpenConnect } = useSolana();
   const { wallets, select } = useWallet();
   const [open, setOpen] = React.useState(true);
 

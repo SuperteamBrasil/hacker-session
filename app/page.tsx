@@ -7,7 +7,7 @@ import { SolanaProvider } from "@/src/context/Solana";
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col p-10">
       <SolanaProvider>
         <ConnectWallet />
         <ModalConnect />

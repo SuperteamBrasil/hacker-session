@@ -3,7 +3,6 @@
 import { useWallet } from "@solana/wallet-adapter-react";
 import {
   LAMPORTS_PER_SOL,
-  Transaction,
   TransactionInstruction,
   TransactionMessage,
   SystemProgram,
@@ -16,9 +15,7 @@ import validateWallet from "../utils/validateWallet";
 
 const Main = () => {
   const wallet = useWallet();
-  const [recipient, setRecipient] = useState(
-    "5WbkB6sDuzBFD5kP1gdAmcemCyGjs9StPLcPpiyGuR5u"
-  );
+  const [recipient, setRecipient] = useState("");
   const [value, setValue] = useState("");
 
   const sendSolana = useCallback(async () => {
@@ -62,27 +59,36 @@ const Main = () => {
   }, [recipient, value, wallet]);
 
   return (
-    <div>
-      <h1>Wallet</h1>
+    <div className="flex flex-col items-center justify-center text-white">
+      <h1 className="font-bold">Wallet Connected</h1>
       <p>{wallet.publicKey?.toBase58()}</p>
 
-      <div className="flex items-center gap-3">
+      <span className="mt-10 text-xl font-bold">Send Solana</span>
+
+      <div className="flex items-center gap-3 mt-4">
         <input
-          className="text-black"
+          className="border border-white/30 rounded-md p-2 placeholder:text-white/50"
+          placeholder="Recipient Address"
           type="text"
           value={recipient}
           onChange={(e) => setRecipient(e.target.value)}
         />
 
         <input
-          className="text-black"
+          className="border border-white/30 rounded-md p-2 placeholder:text-white/50"
+          placeholder="Amount"
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-
-        <button onClick={sendSolana}>Send</button>
       </div>
+
+      <button
+        className="bg-blue-500 font-bold py-2 px-10 rounded-md mt-8"
+        onClick={sendSolana}
+      >
+        Send
+      </button>
     </div>
   );
 };
