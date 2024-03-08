@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@firethreexyz/firethree-protocol": "^0.18.9",
+    "@firethreexyz/firethree-protocol": "0.19.1",
     "@magic-ext/oauth": "^15.6.0",
     "@magic-ext/solana": "^18.4.0",
     "@solana/spl-token": "^0.4.1",
