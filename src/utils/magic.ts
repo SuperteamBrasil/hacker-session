@@ -14,7 +14,7 @@ const magicInstance = () => {
             "https://mainnet.helius-rpc.com/?api-key=9f2db4bc-ecc8-47e8-882b-15f2d6ad7dcb",
         }),
       ],
-    });
+    }); 
   }
 };
 
