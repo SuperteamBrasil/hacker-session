@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@import url("./_wallet-adapter.css");
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background: #020409;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea,
+input {
+  outline: none;
+  background: transparent;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #091326;
+}
+::-webkit-scrollbar {
+  width: 2px;
+  background: #091326;
+  border-radius: 5px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #98b0c1;
+  border-radius: 5px;
+}
+
+.container-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.transition-1s {
+  transition: all 0.1s ease-in-out;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    243deg,
+    #f2be47 13.36%,
+    #ea7938 80%,
+    #e13d2f 135.67%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+  background: linear-gradient(
+    230deg,
+    #f2be47 6.64%,
+    #ea7938 46.66%,
+    #e13d2f 80.09%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-block-main-custom .button-block-bottom-right,
+.button-block-main-custom .button-block-top-left {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  z-index: 2;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent #091326 #091326;
+}
+
+.custom-tooltip {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 85px;
+  border-radius: 0px;
+  backdrop-filter: blur(70px);
+  padding: 15px;
+  font-family: "__IBM_Plex_Mono_b094e2", "__IBM_Plex_Mono_Fallback_b094e2";
+  color: #fff;
+  font-weight: 500;
+  border: 1px solid #222b3c;
+  box-shadow: 1px 1px 5px #091326;
+}
+
+.highcharts-tooltip {
+  opacity: 0;
+}
+
+.Toastify__toast-icon {
+  display: none !important;
+}
